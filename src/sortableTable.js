@@ -15,8 +15,8 @@ const SORT_TABLE_CLASS = 'js-sortable';
 const FILTER_CLASS = 'js-sortable-filter';
 const FILTER_LIST_CLASS = 'js-sortable-filter-list';
 const OUTPUT_CLASS = 'js-sortable-total';
-const THEIR_LIST_CLASS = 'list';
-const THEIR_BUTTON_CLASS = 'sort';
+const DEPEND_LIST_CLASS = 'js-list';
+const DEPEND_BUTTON_CLASS = 'js-sort';
 
 const DEFAULT_TABLE_SELECTOR = 'table.' + SORT_TABLE_CLASS;
 const NOT_SORTABLE_SELECTOR = 'th.not-sortable';
@@ -492,7 +492,7 @@ function prepSortableTable(table, scopeElement, notSortableSelector, buttonClass
     return;
   }
 
-  tbody.classList.add(THEIR_LIST_CLASS);
+  tbody.classList.add(DEPEND_LIST_CLASS);
 
   /** @type {SortableColumn[]} */
   const columns = [];
@@ -516,7 +516,7 @@ function prepSortableTable(table, scopeElement, notSortableSelector, buttonClass
 
     const button = document.createElement('button');
     button.type = 'button';
-    button.className = [ buttonClass, THEIR_BUTTON_CLASS ].filter(Boolean).join(' ');
+    button.className = [ buttonClass, DEPEND_BUTTON_CLASS ].filter(Boolean).join(' ');
     button.setAttribute('data-sort', key);
     while (cell.firstChild) {
       button.append(cell.firstChild);
@@ -543,7 +543,8 @@ function prepSortableTable(table, scopeElement, notSortableSelector, buttonClass
 
   const list = new window.List(table, {
     valueNames,
-    listClass: THEIR_LIST_CLASS,
+    listClass: DEPEND_LIST_CLASS,
+    sortClass: DEPEND_BUTTON_CLASS,
   });
 
   list.on('sortComplete', () => syncAriaFromListButtons(columns));
