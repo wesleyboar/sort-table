@@ -31,7 +31,7 @@ let listJsMissingLogged = false;
 /**
  * @typedef {FilterSpecForSearch | FilterSpecForSelect} FilterSpec
  * @typedef {{ type: 'search', placeholder?: string }} FilterSpecForSearch
- * @typedef {{ type: 'select', column: number, label?: string }} FilterSpecForSelect
+ * @typedef {{ type: 'select', column: number, label?: string }} FilterSpecForSelect - column is 1-based
  */
 
 /**
@@ -84,8 +84,8 @@ function parseFilterSpecs(table) {
  * @param {FilterSpecForSelect} spec
  */
 function setSelectFilterCaption(caption, table, spec) {
-  const columnIndex = spec.column;
-  const textFallback = spec.label ?? `Column ${columnIndex + 1}`;
+  const columnIndex = spec.column - 1;
+  const textFallback = spec.label ?? `Column ${spec.column}`;
   const cell = table.tHead?.rows[0]?.cells[columnIndex];
 
   if (cell instanceof HTMLTableCellElement && cell.textContent?.trim()) {
@@ -205,7 +205,7 @@ function wireSelectFilterLabel(label, table, spec) {
   select.id = controlId;
   registerFilterControl(select, table.id);
 
-  for (const optionText of collectSelectOptions(table, spec.column)) {
+  for (const optionText of collectSelectOptions(table, spec.column - 1)) {
     const option = document.createElement('option');
     option.textContent = optionText;
     select.append(option);
