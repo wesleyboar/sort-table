@@ -86,7 +86,7 @@ The filter `<template>` is self-injected by `sortableTable.js` on first call. No
 
 `sortableTable.css` includes styles for:
 
-- **[TACC Core-Styles v2](https://github.com/TACC/Core-Styles)** e.g. `--global-font-size--small`, `.c-button--as-link`.
+- **[TACC Core-Styles v2](https://github.com/TACC/Core-Styles)** e.g. `--global-font-size--small`, `.c-button--as-link`, `.icon.icon-…`.
 - **[Bootstrap](https://getbootstrap.com/) v4+:** e.g. `.btn.btn-link`.
 
 The table sorts and filters correctly without either library.
