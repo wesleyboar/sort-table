@@ -9,18 +9,18 @@ Filterable, sortable HTML tables powered by [List.js](https://listjs.com/) — f
 E.g. [JSDelivr](https://www.jsdelivr.com/):
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tacc/filter-sort@0.1.0/src/filterSort.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tacc/filter-sort@0.1.0/src/filtersort.css" />
 <script src="https://cdn.jsdelivr.net/npm/list.js@2.3.1/dist/list.min.js" crossorigin="anonymous">/* List.js (required global dependency for @tacc/filter-sort) */</script>
 <script type="module">
-  import filterSort from 'https://cdn.jsdelivr.net/npm/@tacc/filter-sort@0.1.0/src/filterSort.js';
-  filterSort();
+  import filtersort from 'https://cdn.jsdelivr.net/npm/@tacc/filter-sort@0.1.0/src/filtersort.js';
+  filtersort();
 </script>
 ```
 
 > [!NOTE]
 > During pre-release, use commit SHA URLs instead of version tags:
 > ```
-> https://cdn.jsdelivr.net/gh/wesleyboar/filter-sort@__SHA__/src/filterSort.js
+> https://cdn.jsdelivr.net/gh/wesleyboar/filter-sort@__SHA__/src/filtersort.js
 > ```
 
 ### Table Markup
@@ -58,9 +58,9 @@ To auto-build a filter bar above a table, add `id` and filter attributes to the 
 ```
 
 > [!NOTE]
-> `data-filtersort-select-cols="1"` creates a select filter for the **1st** column, `"2"` for the **2nd**, _et cetera_. Select filter labels are auto-derived from `<th>` text. The filter markup is self-injected by `filterSort.js` on first call (no extra manual HTML required).
+> `data-filtersort-select-cols="1"` creates a select filter for the **1st** column, `"2"` for the **2nd**, _et cetera_. Select filter labels are auto-derived from `<th>` text. The filter markup is self-injected by `filtersort.js` on first call (no extra manual HTML required).
 
-### `filterSort()` Options
+### `filtersort()` Options
 
 | Option | Default | Description |
 |---|---|---|
@@ -78,4 +78,4 @@ To auto-build a filter bar above a table, add `id` and filter attributes to the 
 
 ## Requirements
 
-- `list.js` ≥2 must be loaded as `window.List` before `filterSort()` is called.
+- `list.js` ≥2 must be loaded as `window.List` before `filtersort()` is called.

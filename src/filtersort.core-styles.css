@@ -1,8 +1,8 @@
 /* CORE-STYLES */
-.filtersort-filter output {
+.filtersort__filter output {
   font-size: var(--global-font-size--small);
 }
-label.filtersort-filter output {
+label.filtersort__filter output {
   font-weight: normal;
 }
 
