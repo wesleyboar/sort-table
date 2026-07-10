@@ -541,7 +541,6 @@ function prepSortableTable(table, scopeElement, notSortableSelector, buttonClass
 
 /**
  * Inject the filter `<template>` into the DOM if not already present.
- * Consumers who serve sortableTableTemplate.html directly can skip this.
  */
 function ensureFilterTemplate() {
   if (document.getElementById(FILTER_TEMPLATE_ID)) {
