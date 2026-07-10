@@ -18,9 +18,9 @@
     "node": ">=20.x",
     "npm": ">=7.x"
   },
-  "homepage": "https://github.com/wesleyboar/filter-sort",
+  "homepage": "https://github.com/TACC/filter-sort",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/wesleyboar/filter-sort.git"
+    "url": "git+ssh://git@github.com/TACC/filter-sort.git"
   }
 }
