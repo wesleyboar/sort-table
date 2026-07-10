@@ -67,7 +67,7 @@ jobs:
             --title "chore: sync v${{ steps.version.outputs.version }} to main" \
             --body "Automated version bump from the [Release workflow](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}).
 
-          Merging this syncs \`package.json\` (and \`package-lock.json\`) back to \`main\` after the npm publish has already completed. Safe to merge at any time." \
+          Merging this syncs \`package.json\` (and \`package-lock.json\`) back to \`main\` after the npm publish has already completed." \
             --label "release" || true
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
