@@ -52,7 +52,7 @@ Add `class="js-sortable"` to any `<table>`. A `<thead>` with column headers and 
 To auto-build a filter bar above a table, add `id` and filter attributes to the table:
 
 - `data-sortable-search` — include a search input (boolean presence attribute)
-- `data-sortable-select-cols` — comma-separated 1-based column numbers, one select filter per number
+- `data-sortable-select-cols` — comma-separated column numbers, one select filter per number
 
 ```html
 <table id="my-table" class="js-sortable"
@@ -63,7 +63,7 @@ To auto-build a filter bar above a table, add `id` and filter attributes to the 
 ```
 
 > [!NOTE]
-> `data-sortable-select-cols="1"` creates a select filter for the 1st column, `"2"` for the 2nd, _et cetera_. Select filter labels are auto-derived from `<th>` text. The filter markup is self-injected by `sortableTable.js` on first call (no extra manual HTML required).
+> `data-sortable-select-cols="1"` creates a select filter for the **1st** column, `"2"` for the **2nd**, _et cetera_. Select filter labels are auto-derived from `<th>` text. The filter markup is self-injected by `sortableTable.js` on first call (no extra manual HTML required).
 
 ### `sortableTable()` Options
 
