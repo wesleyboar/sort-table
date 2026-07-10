@@ -1,4 +1,4 @@
-# `@tacc/sortable-table`
+# `@tacc/sort-table`
 
 Sortable, filterable HTML tables powered by [List.js](https://listjs.com/) — for TACC CMS pages.
 
@@ -10,14 +10,14 @@ E.g. [JSDelivr](https://www.jsdelivr.com/):
 
 ```html
 <!-- CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tacc/sortable-table@0.1.0/src/sortableTable.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tacc/sort-table@0.1.0/src/sortableTable.css" />
 
 <!-- List.js (required global dependency) -->
 <script src="https://cdn.jsdelivr.net/npm/list.js@2.3.1/dist/list.min.js" crossorigin="anonymous"></script>
 
 <!-- JS -->
 <script type="module">
-  import sortableTable from 'https://cdn.jsdelivr.net/npm/@tacc/sortable-table@0.1.0/src/sortableTable.js';
+  import sortableTable from 'https://cdn.jsdelivr.net/npm/@tacc/sort-table@0.1.0/src/sortableTable.js';
   sortableTable();
 </script>
 ```
@@ -25,7 +25,7 @@ E.g. [JSDelivr](https://www.jsdelivr.com/):
 > [!NOTE]
 > During pre-release, use commit SHA URLs instead of version tags:
 > ```
-> https://cdn.jsdelivr.net/gh/wesleyboar/sortable-table@__SHA__/src/sortableTable.js
+> https://cdn.jsdelivr.net/gh/wesleyboar/sort-table@__SHA__/src/sortableTable.js
 > ```
 
 ### Table Markup
