@@ -1,6 +1,6 @@
 /* FILTERS */
 
-.sortable-filter-list {
+.filtersort-filter-list {
   --icon-width: 2.4rem;
   --icon-pad-horz: 10px;
 
@@ -15,13 +15,13 @@
   }
 
   /* to prevent wide fields from exceeding fieldset width */
-  & .sortable-filter,
-  & .sortable-filter__input {
+  & .filtersort-filter,
+  & .filtersort-filter__input {
     min-width: 0;
   }
 }
 
-.sortable-filter {
+.filtersort-filter {
   display: flex;
   align-items: center;
 
@@ -30,27 +30,27 @@
   }
 }
 
-.sortable-filter__label + .sortable-filter__input {
+.filtersort-filter__label + .filtersort-filter__input {
   margin-inline-start: 1em;
 }
 
-.sortable-filter output {
+.filtersort-filter output {
   min-width: 4ch;
 }
-.sortable-filter__input + output {
+.filtersort-filter__input + output {
   margin-left: 1em;
 }
 
 /* to align icon atop search field */
-.sortable-filter:has([type="search"]) {
+.filtersort-filter:has([type="search"]) {
   display: grid;
   grid-auto-flow: column;
 
-  & .sortable-filter__input {
+  & .filtersort-filter__input {
     grid-row: 1 / 1;
     grid-column: 1 / 2;
   }
-  & .sortable-filter__icon {
+  & .filtersort-filter__icon {
     grid-row: 1 / 1;
     grid-column: 1 / 1;
     z-index: 1;
@@ -58,11 +58,11 @@
   }
 
   /* to place icon inside search field */
-  .sortable-filter__input {
+  .filtersort-filter__input {
     width: 30ch;
     text-indent: calc(var(--icon-width) + var(--icon-pad-horz));
   }
-  .sortable-filter__icon {
+  .filtersort-filter__icon {
     box-sizing: content-box;
     margin-inline: var(--icon-pad-horz);
   }
@@ -71,7 +71,7 @@
 
 /* TABLE */
 
-table.js-sortable {
+table.js-filtersort {
   & tbody:empty::before {
     content: 'No results found';
   }
