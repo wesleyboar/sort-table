@@ -21,9 +21,9 @@
     "node": ">=20.x",
     "npm": ">=7.x"
   },
-  "homepage": "https://github.com/TACC/filter-sort",
+  "homepage": "https://github.com/wesleyboar/Core-HTML-Filter-Sort",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/TACC/filter-sort.git"
+    "url": "git+ssh://git@github.com/wesleyboar/Core-HTML-Filter-Sort.git"
   }
 }
